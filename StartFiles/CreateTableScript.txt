@@ -1,0 +1,17 @@
+Create table Video
+(
+    Id int not null auto_increment,
+    Theme varchar(100) not null,
+    Status int not null,
+    CreateDate Datetime not null,
+    Success bit null,
+    LastUpdate Datetime null, 
+    UploadDate Datetime null,
+    Title varchar(500),
+    Text text,
+    VoiceFileName varchar(500),
+    MusicFileName varchar(500),
+    ImageFileName varchar(500),
+    EditedVideoFileName varchar(500),
+    primary key (Id)
+);
