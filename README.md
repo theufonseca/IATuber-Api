@@ -1,5 +1,5 @@
 # IATuber-Api
-Api to start new video process and to query video status
+Api para iniciar processo de novo vídeo e consultar o andamento dos processamentos
 
 Requisitos:
 - .NET 6
