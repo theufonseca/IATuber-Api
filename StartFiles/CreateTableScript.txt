@@ -13,5 +13,6 @@ Create table Video
     MusicFileName varchar(500),
     ImageFileName varchar(500),
     EditedVideoFileName varchar(500),
+    ErrorDetail text,
     primary key (Id)
 );
