@@ -28,7 +28,7 @@ namespace Infra.RabbitMQ
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            this.connection.Dispose();
         }
     }
 }
