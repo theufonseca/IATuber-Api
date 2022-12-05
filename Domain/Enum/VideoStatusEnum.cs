@@ -12,10 +12,12 @@ namespace Domain.Enum
         STARTED,
         CREATING_TITLE,
         CREATING_TEXT,
+        CREATING_KEYWORDS,
         CREATING_VOICE,
         CREATING_MUSIC,
         CREATING_VIDEO,
         EDITING_VIDEO,
+        READY_TO_UPLOAD,
         UPLOADING,
         FINISHED
     }
