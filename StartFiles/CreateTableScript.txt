@@ -11,17 +11,19 @@ Create table Video
     Text text,
     Keywords varchar(500),
     VoiceFileName varchar(500),
+    VoiceUrl varchar(500),
     MusicFileName varchar(500),
-    ImageFileName varchar(500),
+    MusicUrl varchar(500),
     EditedVideoFileName varchar(500),
     ErrorDetail text,
     primary key (Id)
 );
 
 create table Image(
-	Id int not null auto_increment,
+    Id int not null auto_increment,
     VideoId int not null,
     ImageFileName varchar(500) not null,
+    ImageUrl varchar(500) not null,
     CreateDate Datetime not null,
     primary key (Id),
     Foreign key (VideoId) references Video(Id)

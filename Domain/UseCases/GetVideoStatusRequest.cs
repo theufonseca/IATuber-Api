@@ -18,6 +18,8 @@ namespace Domain.UseCases
     {
         public VIDEO_STATUS Status { get; set; }
         public string StatusText { get { return Status.ToString(); } }
+        public bool? Success { get; set; }
+        public string? ErrorDetail { get; set; }
     }
 
     public class GetVideoStatusRequestHandler : IRequestHandler<GetVideoStatusRequest, GetVideoStatusResponse>
@@ -39,7 +41,12 @@ namespace Domain.UseCases
             if (video is null)
                 throw new ArgumentException("Video not found");
 
-            return new GetVideoStatusResponse { Status = video.Status };
+            return new GetVideoStatusResponse
+            {
+                Status = video.Status,
+                ErrorDetail = video.ErrorDetail,
+                Success = video.Success
+            };
         }
     }
 }
