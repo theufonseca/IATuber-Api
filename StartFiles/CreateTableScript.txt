@@ -1,6 +1,6 @@
 Create table Video
 (
-	Id int not null auto_increment,
+    Id int not null auto_increment,
     Theme varchar(100) not null,
     Status int not null,
     CreateDate Datetime not null,
@@ -16,4 +16,13 @@ Create table Video
     EditedVideoFileName varchar(500),
     ErrorDetail text,
     primary key (Id)
+);
+
+create table Image(
+	Id int not null auto_increment,
+    VideoId int not null,
+    ImageFileName varchar(500) not null,
+    CreateDate Datetime not null,
+    primary key (Id),
+    Foreign key (VideoId) references Video(Id)
 );
